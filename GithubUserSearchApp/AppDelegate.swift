@@ -16,6 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        
+        if CommandLine.arguments.contains("--GithubUserSearchMocking--") {
+             launchCountryListVCForMocking()
+         }
+        
         return true
     }
 
@@ -39,6 +45,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    private func getJsonFileName() -> String {
+        if CommandLine.arguments.contains("--NoUserFoundError--") {
+            return "NoUsers"
+        }
+        return "Users"
+    }
+    
+    private func launchCountryListVCForMocking() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let githubSearchVC = storyboard.instantiateViewController(withIdentifier: "UserSearchViewController") as? UserSearchViewController
+        
+        if let githubSearchVC = githubSearchVC {
+            let mockSession = URLSessionMock()
+            mockSession.data = JsonFileReader.getJsonFileData(fileName: getJsonFileName())
+            githubSearchVC.viewModel = UserSearchViewModel(githubUserWebService: WebServiceManager(session: mockSession))
+            
+            self.window?.rootViewController = githubSearchVC
+            self.window?.makeKeyAndVisible()
+        }
     }
 
 
