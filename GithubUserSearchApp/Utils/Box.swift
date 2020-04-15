@@ -6,6 +6,10 @@
 //  Copyright © 2020 user. All rights reserved.
 //
 
+/*
+        This class is used to make 2-way binding in MVVM design pattern instead of creating delegate and KVO.
+ */
+
 import Foundation
 
 class Box<T> {

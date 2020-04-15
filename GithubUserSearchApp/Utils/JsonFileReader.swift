@@ -9,7 +9,7 @@
 import Foundation
 
 /*
- This class is using for read json file for mocking purpose
+ This class is helping to read of json file for mocking purpose
  */
 class JsonFileReader {
     

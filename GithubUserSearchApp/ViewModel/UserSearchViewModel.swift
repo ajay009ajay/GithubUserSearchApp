@@ -81,8 +81,8 @@ extension UserSearchViewModel: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as! SearchTableViewCell
         
-        cell.userNameLabel.text = users[indexPath.row].login
-        ImageCacher.sharedImageCacher.loadImageFromUrl(urlString: users[indexPath.row].avatarURL, imageView: cell.userThumbImage!)
+        let userModelData = users[indexPath.row]
+        cell.drawCell(userData: userModelData)
         return cell
     }
    

@@ -26,6 +26,6 @@ class SearchTableViewCell: UITableViewCell {
     
     func drawCell(userData: UserModel)  {
         userNameLabel.text = userData.login
+        ImageCacher.sharedImageCacher.loadImageFromUrl(urlString: userData.avatarURL, imageView: userThumbImage!)
     }
-
 }

@@ -9,7 +9,7 @@
 import Foundation
 
 enum CommonSetting {
-    static let perPage = 50
+    static let perPage = 100
     static let startPageNumber = 1
 }
 
@@ -25,7 +25,3 @@ enum CustomError: Error {
     case httpServerError
     case noResultFoundError
 }
-
-//enum TableViewConstant {
-//    static let userSearchTableViewHeight: CGFloat = 130
-//}

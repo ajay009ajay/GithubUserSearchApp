@@ -202,7 +202,6 @@
 		CE4D80F52444F1190074BB3E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CE4D8113244536D70074BB3E /* ReqModel */,
 				CE4D8114244536D70074BB3E /* RespModel */,
 			);
 			path = Model;
@@ -242,13 +241,6 @@
 				CE4D810F244503F90074BB3E /* UserSearchViewController.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		CE4D8113244536D70074BB3E /* ReqModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ReqModel;
 			sourceTree = "<group>";
 		};
 		CE4D8114244536D70074BB3E /* RespModel */ = {
