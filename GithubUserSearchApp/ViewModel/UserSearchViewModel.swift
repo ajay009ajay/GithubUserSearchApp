@@ -44,7 +44,7 @@ extension UserSearchViewModel {
                 return
             }
             
-            if let allUsers = userArr, allUsers.count > 0 {
+            if let allUsers = userArr, !allUsers.isEmpty {
                 if pageNumber != CommonSetting.startPageNumber {
                     self?.users.append(contentsOf: allUsers)
                 } else {
@@ -81,8 +81,10 @@ extension UserSearchViewModel: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as! SearchTableViewCell
         
-        let userModelData = users[indexPath.row]
-        cell.drawCell(userData: userModelData)
+            let userModelData = users[indexPath.row]
+            cell.drawCell(userData: userModelData)
+            cell.selectionStyle = .none
+        
         return cell
     }
    

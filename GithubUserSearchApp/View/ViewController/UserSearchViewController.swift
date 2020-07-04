@@ -18,12 +18,14 @@ class UserSearchViewController: UIViewController {
         
     public var viewModel = UserSearchViewModel(githubUserWebService: WebServiceManager())
     let spinner = UIActivityIndicatorView(style: .gray)
-    
+    let searchSpinner = UIActivityIndicatorView(style: .gray)
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
         
+        self.view.addSubview(searchSpinner)
         userTableView.dataSource = viewModel
         
         initViewModelSetup()
@@ -72,6 +74,11 @@ class UserSearchViewController: UIViewController {
     }
     
     private func stopAnimatingSpinner() {
+        
+        if searchSpinner.isAnimating {
+             searchSpinner.stopAnimating()
+             searchSpinner.hidesWhenStopped = true
+        }
         if spinner.isAnimating {
             spinner.stopAnimating()
             spinner.hidesWhenStopped = true
@@ -97,6 +104,9 @@ class UserSearchViewController: UIViewController {
 
 extension UserSearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
+        searchSpinner.frame = UIScreen.main.bounds
+        searchSpinner.startAnimating()
         viewModel.getGithubUser(searchText: searchText)
     }
 }
