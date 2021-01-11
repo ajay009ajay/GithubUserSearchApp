@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2FADE525ACC39200E05C29 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2FADE425ACC39200E05C29 /* Observable.swift */; };
 		CE4D80C02444EEDD0074BB3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D80BF2444EEDD0074BB3E /* AppDelegate.swift */; };
 		CE4D80C52444EEDD0074BB3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE4D80C32444EEDD0074BB3E /* Main.storyboard */; };
 		CE4D80C72444EEDF0074BB3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4D80C62444EEDF0074BB3E /* Assets.xcassets */; };
@@ -16,7 +17,6 @@
 		CE4D80FB2444F1190074BB3E /* URLSessionDataTaskMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D80F32444F1190074BB3E /* URLSessionDataTaskMock.swift */; };
 		CE4D80FC2444F1190074BB3E /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D80F42444F1190074BB3E /* URLSessionMock.swift */; };
 		CE4D81002444F78F0074BB3E /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D80FF2444F78F0074BB3E /* SearchTableViewCell.swift */; };
-		CE4D81022444F7B80074BB3E /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D81012444F7B80074BB3E /* Box.swift */; };
 		CE4D81042444F7C50074BB3E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D81032444F7C50074BB3E /* Constant.swift */; };
 		CE4D81082444F7E00074BB3E /* JsonFileReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D81072444F7E00074BB3E /* JsonFileReader.swift */; };
 		CE4D810A2444F83C0074BB3E /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4D81092444F83C0074BB3E /* WebServiceManager.swift */; };
@@ -47,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE2FADE425ACC39200E05C29 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		CE4D80BC2444EEDD0074BB3E /* GithubUserSearchApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubUserSearchApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4D80BF2444EEDD0074BB3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE4D80C42444EEDD0074BB3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -62,7 +63,6 @@
 		CE4D80F32444F1190074BB3E /* URLSessionDataTaskMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionDataTaskMock.swift; sourceTree = "<group>"; };
 		CE4D80F42444F1190074BB3E /* URLSessionMock.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		CE4D80FF2444F78F0074BB3E /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
-		CE4D81012444F7B80074BB3E /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		CE4D81032444F7C50074BB3E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		CE4D81072444F7E00074BB3E /* JsonFileReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileReader.swift; sourceTree = "<group>"; };
 		CE4D81092444F83C0074BB3E /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
@@ -210,10 +210,10 @@
 		CE4D80F62444F1190074BB3E /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				CE4D81012444F7B80074BB3E /* Box.swift */,
 				CE4D81032444F7C50074BB3E /* Constant.swift */,
 				CE4D81072444F7E00074BB3E /* JsonFileReader.swift */,
 				CE972ED324462BEF000C4A71 /* ImageCacher.swift */,
+				CE2FADE425ACC39200E05C29 /* Observable.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -386,7 +386,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE4D81082444F7E00074BB3E /* JsonFileReader.swift in Sources */,
-				CE4D81022444F7B80074BB3E /* Box.swift in Sources */,
 				CE4D80FC2444F1190074BB3E /* URLSessionMock.swift in Sources */,
 				CE4D81042444F7C50074BB3E /* Constant.swift in Sources */,
 				CE4D8116244536EB0074BB3E /* UserModel.swift in Sources */,
@@ -395,6 +394,7 @@
 				CE4D81002444F78F0074BB3E /* SearchTableViewCell.swift in Sources */,
 				CE4D8110244503F90074BB3E /* UserSearchViewController.swift in Sources */,
 				CE4D810A2444F83C0074BB3E /* WebServiceManager.swift in Sources */,
+				CE2FADE525ACC39200E05C29 /* Observable.swift in Sources */,
 				CE972ED424462BEF000C4A71 /* ImageCacher.swift in Sources */,
 				CE4D80C02444EEDD0074BB3E /* AppDelegate.swift in Sources */,
 				CE4D80FB2444F1190074BB3E /* URLSessionDataTaskMock.swift in Sources */,

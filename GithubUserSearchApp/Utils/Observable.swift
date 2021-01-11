@@ -1,18 +1,14 @@
 //
-//  Box.swift
+//  Observable.swift
 //  GithubUserSearchApp
 //
-//  Created by user on 4/14/20.
-//  Copyright © 2020 user. All rights reserved.
+//  Created by user on 1/11/21.
+//  Copyright © 2021 user. All rights reserved.
 //
-
-/*
-        This class is used to make 2-way binding in MVVM design pattern instead of creating delegate and KVO.
- */
 
 import Foundation
 
-class Box<T> {
+class Observable<T> {
     typealias Listener = (T) -> Void
     var listener: Listener?
     

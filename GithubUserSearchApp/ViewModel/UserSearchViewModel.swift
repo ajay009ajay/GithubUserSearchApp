@@ -15,8 +15,8 @@ class UserSearchViewModel: NSObject {
     private var pageNumber = CommonSetting.startPageNumber
     private var users = [UserModel]()
     
-    var isUserDataUpdated: Box<Bool> = Box(false)
-    var isErrorOccured: Box<CustomError?> = Box(nil)
+    var isUserDataUpdated: Observable<Bool> = Observable(false)
+    var isErrorOccured: Observable<CustomError?> = Observable(nil)
 
     init(githubUserWebService: WebServiceManager) {
         self.githubUserWebService = githubUserWebService
