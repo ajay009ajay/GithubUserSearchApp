@@ -12,3 +12,9 @@ To do this, the app has to inquire the Github API.
 Please refer to the documentation on how to make requests. Make sure to handle the possible
 corner cases well (ex: this API has a limit of 10 hits per minute, empty result, etc). To submit,
 please share your code. which we can download, test, and inspect.
+
+
+![Alt text](https://github.com/ajay009ajay/GithubUserSearchApp/blob/master/output.png?raw=true "Optional Title")
+
+
+
